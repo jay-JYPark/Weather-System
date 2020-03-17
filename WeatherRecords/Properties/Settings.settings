@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WeatherRecords.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DbIp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="DbPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1521</Value>
+    </Setting>
+    <Setting Name="DbId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">w_db</Value>
+    </Setting>
+    <Setting Name="DbPw" Type="System.String" Scope="User">
+      <Value Profile="(Default)">weather</Value>
+    </Setting>
+    <Setting Name="DbSid" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

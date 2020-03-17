@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherRecords", "WeatherRecords.csproj", "{ABD123CF-36EE-4122-91E2-F68C4F6C9EA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherStats", "..\WeatherStats\WeatherStats.csproj", "{D335E7F4-4808-4847-8672-1E0F77806176}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABD123CF-36EE-4122-91E2-F68C4F6C9EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD123CF-36EE-4122-91E2-F68C4F6C9EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD123CF-36EE-4122-91E2-F68C4F6C9EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD123CF-36EE-4122-91E2-F68C4F6C9EA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D335E7F4-4808-4847-8672-1E0F77806176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D335E7F4-4808-4847-8672-1E0F77806176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D335E7F4-4808-4847-8672-1E0F77806176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D335E7F4-4808-4847-8672-1E0F77806176}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,246 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCA899DE-BED9-4B21-8152-65E8F59FC3BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeatherRSystem</RootNamespace>
+    <AssemblyName>WeatherRSystem</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.Viewer3, Version=5.2.1236.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\refDlls\ActiveReports.Viewer3.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports3, Version=5.2.1236.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\refDlls\ActiveReports3.dll</HintPath>
+    </Reference>
+    <Reference Include="AdengFx, Version=1.1.4.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\refDlls\AdengFx.dll</HintPath>
+    </Reference>
+    <Reference Include="AlarmWindow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\AlarmWindow.exe</HintPath>
+    </Reference>
+    <Reference Include="CDMAComm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\CDMAComm.dll</HintPath>
+    </Reference>
+    <Reference Include="CdmaProtoMng, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\CdmaProtoMng.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceAlarmWindow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\DeviceAlarmWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="EthernetData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\EthernetData.dll</HintPath>
+    </Reference>
+    <Reference Include="ParsingWeatherDiviceProtocol, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\ParsingWeatherDiviceProtocol.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WDeviceChecker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WDeviceChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="WeatherAbout, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WeatherAbout.dll</HintPath>
+    </Reference>
+    <Reference Include="WeatherDataClass, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WeatherDataClass.dll</HintPath>
+    </Reference>
+    <Reference Include="WeatherDataMng, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WeatherDataMng.dll</HintPath>
+    </Reference>
+    <Reference Include="WeatherObject, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WeatherObject.dll</HintPath>
+    </Reference>
+    <Reference Include="WeatherProtoMng, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WeatherProtoMng.dll</HintPath>
+    </Reference>
+    <Reference Include="WeatherSerial, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WeatherSerial.dll</HintPath>
+    </Reference>
+    <Reference Include="WeatherTcpClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WeatherTcpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="WeatherTcpServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WeatherTcpServer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Control\MountainValley\WeatherLogin\WeatherLogin.csproj">
+      <Project>{A925F948-79C7-4320-9D16-AD2B453F03BB}</Project>
+      <Name>WeatherLogin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Control\MountainValley\WeatherSplash\WeatherSplash.csproj">
+      <Project>{0ED1DD44-D4F5-493B-B56A-B61FAFD6C958}</Project>
+      <Name>WeatherSplash</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\WeatherRecords\WeatherRecords.csproj">
+      <Project>{ABD123CF-36EE-4122-91E2-F68C4F6C9EA7}</Project>
+      <Name>WeatherRecords</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\WeatherStats\WeatherStats.csproj">
+      <Project>{D335E7F4-4808-4847-8672-1E0F77806176}</Project>
+      <Name>WeatherStats</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WDeviceMng\WDeviceMng.csproj">
+      <Project>{F592223F-11BA-40BB-BCDF-63FCA9805DB3}</Project>
+      <Name>WDeviceMng</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeatherCtrForm\WeatherCtrForm.csproj">
+      <Project>{CA9A6CAF-5963-4B12-B019-74D618B3BBB1}</Project>
+      <Name>WeatherCtrForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeatherForm\WeatherForm.csproj">
+      <Project>{20903B13-25CE-473A-89FF-58AD664C0035}</Project>
+      <Name>WeatherForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeatherOptionForm\WeatherOptionForm.csproj">
+      <Project>{E1D1AA41-B3CA-4D11-9889-4A2AF9DBAB88}</Project>
+      <Name>WeatherOptionForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeatherSelfTest\WeatherSelfTest.csproj">
+      <Project>{4E0F7CCA-4BDC-4DBE-A1AF-0A2E487F38DB}</Project>
+      <Name>WeatherSelfTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeatherSMSForm\WeatherSMSForm.csproj">
+      <Project>{BF949E8B-2773-4FF6-B690-FE8A7F936539}</Project>
+      <Name>WeatherSMSForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_systemRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\DMB_systemGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\기상연계서버 바탕아이콘.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\우량기상태.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\우량기제어.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weather_title_White_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_dialogue_control_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\우량기정보관리_41_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\우량기정보관리_24_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuIcon_ProgramInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weather_Loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sms사용자관리_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sms사용자관리_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\통계.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\조회.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\우량기_자가진단_24.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

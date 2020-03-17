@@ -1,0 +1,171 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ABD123CF-36EE-4122-91E2-F68C4F6C9EA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeatherRecords</RootNamespace>
+    <AssemblyName>WeatherRecords</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.Viewer3, Version=5.2.1236.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\refDlls\ActiveReports.Viewer3.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports3, Version=5.2.1236.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\refDlls\ActiveReports3.dll</HintPath>
+    </Reference>
+    <Reference Include="clsPView, Version=1.0.0.18259, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\refDlls\clsPView.dll</HintPath>
+    </Reference>
+    <Reference Include="DAC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\DAC.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.111.6.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\refDlls\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeatherDataMng, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\WeatherDataMng.dll</HintPath>
+    </Reference>
+    <Reference Include="WeatherObject, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\WeatherObject.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AlarmReport.Designer.cs">
+      <DependentUpon>AlarmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceAlarmReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DeviceAlarmReport.Designer.cs">
+      <DependentUpon>DeviceAlarmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DeviceReport.Designer.cs">
+      <DependentUpon>DeviceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventDataType.cs" />
+    <Compile Include="FlowspeedReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FlowspeedReport.Designer.cs">
+      <DependentUpon>FlowspeedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewColumnSorter .cs" />
+    <Compile Include="RecordsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordsForm.Designer.cs">
+      <DependentUpon>RecordsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AlarmReport.resx">
+      <DependentUpon>AlarmReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceAlarmReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DeviceAlarmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceReport.resx">
+      <DependentUpon>DeviceReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlowspeedReport.resx">
+      <DependentUpon>FlowspeedReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordsForm.resx">
+      <DependentUpon>RecordsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RainfallReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RainfallReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaterlevelReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WaterlevelReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RainfallReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RainfallReport.Designer.cs">
+      <DependentUpon>RainfallReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaterlevelReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WaterlevelReport.Designer.cs">
+      <DependentUpon>WaterlevelReport.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

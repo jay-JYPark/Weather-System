@@ -1,0 +1,141 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF949E8B-2773-4FF6-B690-FE8A7F936539}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeatherSMSForm</RootNamespace>
+    <AssemblyName>WeatherSMSForm</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WaitBar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WaitBar.exe</HintPath>
+    </Reference>
+    <Reference Include="WeatherDataMng, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WeatherDataMng.dll</HintPath>
+    </Reference>
+    <Reference Include="WeatherObject, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\WeatherObject.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SMSMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMSMainForm.Designer.cs">
+      <DependentUpon>SMSMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMSMainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SMSMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMSRecvKindDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SMSRecvKindDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMSUserMng.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SMSUserMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SMSRecvKindDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMSRecvKindDlg.Designer.cs">
+      <DependentUpon>SMSRecvKindDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMSUserMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMSUserMng.Designer.cs">
+      <DependentUpon>SMSUserMng.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\폰배경.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_bar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_dialogue_Bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_main1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_subsub_Bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sms사용자수정_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sms사용자등록_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\우량기.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sms담당자관리_22.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
