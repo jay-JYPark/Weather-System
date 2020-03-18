@@ -8,3 +8,8 @@
 - 각종 design pattern, oracle, TCP/UDP/SERIAL 등의 사용
 - protocol data encryption/decryption
 - private 모드를 위해 Contact 필요
+
+# 기상연계 의사결정시스템 UI 일부
+![시안3_03예약방송발령](https://user-images.githubusercontent.com/62281279/76969445-b9561680-696d-11ea-9d71-cd6c5dc52bbe.png)
+
+![시안3_04자동수동특보발령](https://user-images.githubusercontent.com/62281279/76969465-bfe48e00-696d-11ea-9b32-1441f64b6139.png)
